@@ -16,7 +16,7 @@ export default function Student() {
     const paperStyle={padding:'50px 20px', width:600,margin:"20px auto"}
     const[task,setTask]=useState('')
     const[description,setDescription]=useState('')
-    const[students,setStudents]=useState([])
+    const[items,setItems]=useState([])
     const classes = useStyles();
 
     const handleClick=(e)=>{
@@ -37,7 +37,7 @@ useEffect(()=>{
   fetch("http://localhost:8080/todo/")
   .then(res=>res.json())
   .then((result)=>{
-    setStudents(result);
+    setItems(result);
   }
 )
 },[])
@@ -74,7 +74,7 @@ useEffect(()=>{
                 <th>Action</th>       
             </thead>
             <tbody>
-            {students.map(student=>(
+            {items.map(student=>(
             
             <tr>
                 <td>{student.rfrnc}</td>
