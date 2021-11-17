@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Student() {
+export default function Items() {
     const paperStyle={padding:'50px 20px', width:600,margin:"20px auto"}
     const[task,setTask]=useState('')
     const[description,setDescription]=useState('')
